@@ -1,24 +1,22 @@
-import { Typography } from "antd";
-import React from "react";
 
-const { Title } = Typography;
+import React from "react";
+import Button from "../../re-usable components/Button";
+import { Routes, Route, Link } from "react-router-dom";
+import "./Navbar.scss";
 
 const Navbar = () => (
-  <>
-    <Title className="logo">h1. Ant Design</Title>
-    <Title level={2} className="logo">
-      h2. Ant Design
-    </Title>
-    <Title level={3} className="logo">
-      h3. Ant Design
-    </Title>
-    <Title level={4} className="logo">
-      h4. Ant Design
-    </Title>
-    <Title level={5} className="logo">
-      h5. Ant Design
-    </Title>
-  </>
+  <nav className="nav">
+    <h6 className="nav__logo">KryptoX</h6>
+    <div className="nav_pages">
+     <p>Home</p>
+     
+      <p>Trending NFTS</p>
+      <p>Cryptoverse</p>
+      <p>News</p>
+      <p>About Us</p>
+      <Button />
+    </div>
+  </nav>
 );
 
 export default Navbar;

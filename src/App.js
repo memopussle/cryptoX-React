@@ -1,37 +1,51 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import "./styles/styles";
-import { Layout, Typography } from "antd";
 import "./App.scss";
+import "./App.scss";
+import { Routes, Route, Link } from "react-router-dom";
+import Homepage from "./components/Homepage/Homepage";
+import TrendingNFT from "./components/TrendingNFT/TrendingNFT";
+import Cryptoverse from "./components/Cryptoverse/Cryptoverse";
+import About from "./components/About/About";
+import News from "./components/News/News";
 
-const { Title } = Typography;
-const { Header, Footer, Content } = Layout;
 
 const App = () => {
   return (
     <div className="background">
-      <Layout>
-        <Header>
-          <Navbar />
-        </Header>
-        <Content className="content">
-          {" "}
-          <Title className="logo">h1. Ant Design</Title>
-          <Title level={2} className="logo">
-            h2. Ant Design
-          </Title>
-          <Title level={3} className="logo">
-            h3. Ant Design
-          </Title>
-          <Title level={4} className="logo">
-            h4. Ant Design
-          </Title>
-          <Title level={5} className="logo">
-            h5. Ant Design
-          </Title>
-        </Content>
-        <Footer>Footer</Footer>
-      </Layout>
+
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+      <div className="routes">
+        <Routes>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route exact path="/trendingNFTs">
+            <TrendingNFT />
+          </Route>
+          <Route exact path="/cryptoverse">
+            <Cryptoverse />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/news">
+            <News />
+          </Route>
+        </Routes>
+      </div>
     </div>
   );
 };
