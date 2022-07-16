@@ -8,12 +8,22 @@ const Navbar = () => (
   <nav className="nav">
     <h6 className="nav__logo">KryptoX</h6>
     <div className="nav_pages">
-     <p>Home</p>
-     
-      <p>Trending NFTS</p>
-      <p>Cryptoverse</p>
-      <p>News</p>
-      <p>About Us</p>
+      <Link to="/">
+        <p>Home</p>
+      </Link>
+
+      <Link to="/trendingnfts">
+        <p>Trending NFTs</p>
+      </Link>
+      <Link to="/cryptoverse">
+        <p>Cryptoverse</p>
+      </Link>
+      <Link to="/news">
+        <p>News</p>
+      </Link>
+      <Link to="/about">
+        <p>About</p>
+      </Link>
       <Button />
     </div>
   </nav>

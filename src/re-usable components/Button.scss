@@ -4,4 +4,10 @@
    background-image: linear-gradient(to left,var(--primary-purple), var(--primary-blue));
    border: none;
    border-radius: 5px;
+   font-weight: bold;
+   
+   &:hover {
+    cursor: pointer;
+   }
 }
+
