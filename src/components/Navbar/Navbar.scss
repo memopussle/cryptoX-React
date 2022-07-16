@@ -1,11 +1,21 @@
-.nav {
-  display: flex;
-
-  &__pages {
-    display: flex;
+@media (max-width: 70rem) {
+  .nav_pages {
+    display: none;
   }
 }
 
-p {
-    color: white;
+@media (min-width: 70rem) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    &__pages {
+      display: flex;
+    }
+  }
+
+  p {
+    display: inline-block;
+    color: var(--primary-text-color);
+    padding-right: var(--standard-padding);
+  }
 }

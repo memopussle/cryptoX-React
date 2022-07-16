@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Syncopate:wght@400;700&display=swap");
 
+
+
+:root {
+  --primary-purple: #1cc0f4;
+  --primary-blue: #7217ec;
+  --primary-text-color: #ffff;
+  --standard-padding: 2rem;
+
+}
+
+
 body {
   font-family: "Orbitron", sans-serif;
   color: #ffff;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,34 +33,36 @@ html {
 }
 
 h1 {
-  font-size: clamp(3rem, 5vw, 7rem);
+  font-size: clamp(5rem, 5vw, 7rem);
 }
 
 h2 {
-  font-size: clamp(2.5rem, 4.5vw, 6em);
+  font-size: clamp(4.5rem, 4.5vw, 6em);
 }
 h3 {
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(4rem, 4vw, 5rem);
 }
 
 h5 {
-  font-size: clamp(1.5rem, 3.5vw, 4rem);
+  font-size: clamp(3.5rem, 3.5vw, 4rem);
 }
 h6 {
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(3rem, 3vw, 3rem);
+}
+button,
+p {
+  font-size: clamp(1.75rem, 1.75vw, 1.8rem);
+}
 
-}
-button, p{
-  font-size: clamp(0.75rem, 2vw, 2rem);
+
+.container {
+  margin: 0 10vw;
 }
 
-:root {
-  --primary-purple: #1CC0F4;
-  --primary-blue: #7217EC;
-}
 .background {
   background-image: url(../public/img/background-1.jpg);
   width: 100vw;
-  height: 7000px;
+  height: 990rem;
   background-repeat: no-repeat;
 }
+

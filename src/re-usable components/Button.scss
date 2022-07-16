@@ -4,7 +4,7 @@
    background-image: linear-gradient(to left,var(--primary-purple), var(--primary-blue));
    border: none;
    border-radius: 5px;
-   font-weight: bold;
+color: var(--primary-text-color);
    
    &:hover {
     cursor: pointer;

@@ -10,16 +10,17 @@ import News from "./components/News/News";
 
 const App = () => {
   return (
-    <div className="background">
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/trendingnfts" element={<TrendingNFT />} />
-        <Route path="/cryptoverse" element={<Cryptoverse />} />
 
-      </Routes>
-    </div>
+      <div className="background">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/trendingnfts" element={<TrendingNFT />} />
+          <Route path="/cryptoverse" element={<Cryptoverse />} />
+        </Routes>
+      </div>
+   
   );
 };
 
