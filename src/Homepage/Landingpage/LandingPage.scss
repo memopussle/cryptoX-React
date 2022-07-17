@@ -1,0 +1,91 @@
+.header {
+  &__page {
+
+    margin-top: var(--component-margin);
+    &--text {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: var(--standard-padding);
+      & h1 {
+        margin-bottom: var(--standard-padding);
+      }
+    }
+
+    & .button {
+      margin-bottom: var(--small-padding);
+    }
+    &--image {
+      width: 100%;
+      border-width: 4px;
+      border-style: solid;
+      border-image: linear-gradient(
+          to left,
+          var(--primary-purple),
+          var(--primary-blue)
+        )
+        50 60;
+      z-index: 10;
+
+      &-wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+        justify-content: center;
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(
+            to right,
+            var(--primary-blue),
+            var(--primary-purple)
+          );
+          filter: blur(5px);
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.secondary-button {
+  padding: 1rem 3rem;
+}
+@media only screen and (min-width: 33rem) {
+  .header__page {
+    & .secondary-button {
+      margin-left: var(--small-padding);
+    }
+  }
+}
+@media only screen and (min-width: 70rem) {
+  .header__page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--image-wrapper {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media only screen and (min-width: 100rem) {
+  .header__page {
+    margin-bottom:0;
+    &--image {
+      width: 70%;
+
+      &-wrapper::before {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.arrow-symbol {
+  top:20px;
+  
+}

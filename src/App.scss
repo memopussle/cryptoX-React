@@ -1,16 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Syncopate:wght@400;700&display=swap");
 
-
-
 :root {
   --primary-purple: #1cc0f4;
   --primary-blue: #7217ec;
   --primary-text-color: #ffff;
-  --standard-padding: 2rem;
+  --standard-padding: 5rem;
+  --secondary-text-color: #9c9c9c;
+  --small-padding: 2rem;
+  --component-margin: 10rem;
+  --section-margin: 20rem;
+}
 
+@mixin button-main {
+  border-radius: 5px;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(
+    to left,
+    var(--primary-purple),
+    var(--primary-blue)
+  );
+  border: none;
+
+  color: var(--primary-text-color);
+  font-family: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin button-secondary {
+
+  font-family: inherit;
+  padding: 0 5rem;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to left,
+      var(--primary-purple),
+      var(--primary-blue)
+    )
+    1;
+  background: transparent;
+  background: -webkit-linear-gradient(
+    var(--primary-purple),
+    var(--primary-blue)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
+
+.secondary-button {
+  @include button-secondary;
+}
+.button {
+  @include button-main;
+}
 body {
   font-family: "Orbitron", sans-serif;
   color: #ffff;
@@ -33,30 +84,35 @@ html {
 }
 
 h1 {
-  font-size: clamp(5rem, 5vw, 7rem);
+  font-size: clamp(4rem, 4vw, 6rem);
 }
 
 h2 {
-  font-size: clamp(4.5rem, 4.5vw, 6em);
+  font-size: clamp(3.75rem, 3.75vw, 5.5em);
 }
 h3 {
-  font-size: clamp(4rem, 4vw, 5rem);
+  font-size: clamp(3rem, 3vw, 5rem);
 }
 
 h5 {
-  font-size: clamp(3.5rem, 3.5vw, 4rem);
+  font-size: clamp(2.75rem, 2.75vw, 3.75rem);
 }
 h6 {
-  font-size: clamp(3rem, 3vw, 3rem);
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 button,
 p {
-  font-size: clamp(1.75rem, 1.75vw, 1.8rem);
+  font-size: clamp(1.5rem, 1.5vw, 1.8rem);
 }
 
-
-.container {
+.container,
+.header {
   margin: 0 10vw;
+}
+
+//utitlify classes
+.flex {
+  display: flex;
 }
 
 .background {
@@ -65,4 +121,3 @@ p {
   height: 990rem;
   background-repeat: no-repeat;
 }
-
