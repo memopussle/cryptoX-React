@@ -1,3 +1,19 @@
-.crypto {
-    margin-top: var(--section-margin);
+.distortion {
+    width: 700px;
+    height: 700px;
+
+}
+
+.crypto{
+  &__img {
+
+
+  margin-bottom: 3rem;
+  width: 100%;
+ 
+}
+
+&__price {
+    color: var(--secondary-text-color);
+}
 }

@@ -8,6 +8,7 @@ import About from "./components/About/About";
 import News from "./components/News/News";
 import Support from "./components/Support/Support";
 
+
 const App = () => {
   return (
     <div className="background">

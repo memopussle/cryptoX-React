@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Cryptoverse from "../../components/Cryptoverse/Cryptoverse";
 
-const LandingPage= () => {
+const LandingPage = () => {
   return (
     <>
       <Navbar />
@@ -31,7 +31,6 @@ const LandingPage= () => {
         </div>
         <Cryptoverse />
       </div>
-
     </>
   );
 };

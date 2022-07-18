@@ -1,6 +1,6 @@
 .header {
   &__page {
-
+    margin-bottom: var(--section-margin);
     margin-top: var(--component-margin);
     &--text {
       flex-direction: column;
@@ -69,13 +69,8 @@
     &--image-wrapper {
       justify-content: flex-end;
     }
-  }
-}
 
-@media only screen and (min-width: 100rem) {
-  .header__page {
-    margin-bottom:0;
-    &--image {
+     &--image {
       width: 70%;
 
       &-wrapper::before {
@@ -83,9 +78,4 @@
       }
     }
   }
-}
-
-.arrow-symbol {
-  top:20px;
-  
 }

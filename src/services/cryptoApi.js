@@ -15,7 +15,7 @@ export const cryptoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }), //baseUrl = baseUrl variable above
   endpoints: (builder) => ({
     getCryptos: builder.query({
-      query: (count) => createRequest(`/coins`), //will add endpoint to url https://coinranking1.p.rapidapi.com/coins
+      query: (count) => createRequest(`/coins?limit=${count}`), //will add endpoint to url https://coinranking1.p.rapidapi.com/coins
     }),
   }),
 });
