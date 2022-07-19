@@ -8,7 +8,7 @@
   --secondary-text-color: #9c9c9c;
   --small-padding: 2rem;
   --component-margin: 10rem;
-  --section-margin: 40rem;
+  --section-margin: 30rem;
 }
 
 @mixin button-main {
@@ -29,6 +29,7 @@
     cursor: pointer;
   }
 }
+
 
 @mixin button-secondary {
 
@@ -54,7 +55,6 @@
     cursor: pointer;
   }
 }
-
 
 
 .secondary-button {
@@ -85,24 +85,24 @@ html {
 }
 
 h1 {
-  font-size: clamp(4rem, 4vw, 6rem);
+  font-size: clamp(4rem, 4vw, 5rem);
 }
 
 h2 {
-  font-size: clamp(3.75rem, 3.75vw, 5.5em);
+  font-size: clamp(3.75rem, 3.75vw, 4.5em);
 }
 h3 {
-  font-size: clamp(3rem, 3vw, 5rem);
+  font-size: clamp(3rem, 3vw, 4rem);
 }
 
 h5 {
-  font-size: clamp(2.75rem, 2.75vw, 3.75rem);
+  font-size: clamp(2.75rem, 2.75vw, 3rem);
 }
 h6 {
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(2rem, 2vw, 2.25rem);
 }
 button,
-p {
+a,p {
   font-size: clamp(1.5rem, 1.5vw, 1.8rem);
 }
 

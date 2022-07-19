@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import Button from "../../re-usable components/Button";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Hamburger from "../Svg/Hamburger";
 import "./Navbar.scss";
 import Xmark from "../Svg/Xmark";
 
-
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-
   const handleToggle = () => {
-
-    
     setNavbarOpen(!navbarOpen);
   };
 
@@ -24,12 +20,13 @@ const Navbar = () => {
           <Link to="/">
             <p>Home</p>
           </Link>
-          <Link to="/trendingnfts">
-            <p>Trending NFTs</p>
-          </Link>
           <Link to="/cryptoverse">
             <p>Cryptoverse</p>
           </Link>
+          <Link to="/trendingnfts">
+            <p>Trending NFTs</p>
+          </Link>
+
           <Link to="/news">
             <p>News</p>
           </Link>

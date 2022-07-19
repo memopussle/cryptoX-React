@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { gsap } from "gsap";
-import hoverEffect from "hover-effect";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
 import "./Cryptoverse.scss";
-import Imageobject from "./Imageobject";
+import millify from "millify";
+import Arrow from "../../re-usable components/Arrow";
+import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
-
-const Cryptoverse = () => {
-  const count = 6;
+const Cryptoverse = ({ simplified }) => {
+  const count = simplified ? 6 : 34;
   const { data: cryptoList, isFetching } = useGetCryptosQuery(count);
 
   const [cryptos, setCryptos] = useState();
@@ -20,11 +20,36 @@ const Cryptoverse = () => {
 
   if (isFetching) return "Loading...";
   return (
-    <section className="crypto">
-      <h3 className="crypto__text">Cryptoverse</h3>
-      <Imageobject cryptos={cryptos} />
-      <div className="distortion"></div>
-    </section>
+    <>
+      {!simplified && <Navbar />}
+      <section className="container">
+        <h2 className="crypto__text">Cryptoverse</h2>
+        {simplified && <Link to="/cryptoverse">{<Arrow />}</Link>}
+        <div className="crypto__section">
+          {cryptos?.map((currency) => (
+            <div key={currency.uuid}>
+              <a className="crypto flex" href="#">
+                <div className="crypto__card">
+                  <div className="flex">
+                    <h6>
+                      {currency.name} - {currency.symbol}
+                    </h6>
+                    <img
+                      className="crypto__icon"
+                      src={currency.iconUrl}
+                      alt={currency.symbol}
+                    />
+                  </div>
+                  <p>Price: {millify(currency.price)}</p>
+                  <p>Market Cap: {millify(currency.marketCap)}</p>
+                  <p>Rank: 1</p>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

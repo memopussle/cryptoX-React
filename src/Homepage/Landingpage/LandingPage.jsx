@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./LandingPage.scss";
 import Arrow from "../../re-usable components/Arrow";
-import image from "../img/header-img.jpg";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Cryptoverse from "../../components/Cryptoverse/Cryptoverse";
+import TrendingNFT from "../../components/TrendingNFT/TrendingNFT";
+import header1 from "../img/header-img.jpg";
+import header2 from "../img/header-img1.jpg";
+import distortion from "../img/distortion.jpg";
+import hoverEffect from "hover-effect";
 
 const LandingPage = () => {
+  useEffect(() => {
+    var image_animate = new hoverEffect({
+      parent: document.querySelector(".wrapper"),
+      intensity: 0.4,
+      image1: header1,
+      image2: header2,
+      displacementImage: distortion,
+    });
+  });
+
   return (
     <>
       <Navbar />
       <div className="container">
-        <div className="header__page">
+        <div className="header__page ">
           <div className="header__page--text flex">
             <h1>
               Discover, learn and explore {<Arrow />} crypto currencies & NFTs.
@@ -25,12 +39,13 @@ const LandingPage = () => {
               </Link>
             </div>
           </div>
-          <div className="header__page--image-wrapper flex">
-            <img className="header__page--image" src={image} alt="header" />
-          </div>
+
+            <div className="header__page--image-wrapper wrapper"></div>
+
         </div>
-        <Cryptoverse />
       </div>
+      <Cryptoverse simplified />
+      <TrendingNFT />
     </>
   );
 };

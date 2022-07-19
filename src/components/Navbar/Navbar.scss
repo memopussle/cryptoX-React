@@ -17,6 +17,10 @@
       background-color: transparent;
       border: none;
     }
+
+    &:focus {
+      border: none;
+    }
   }
   &__link {
     color: var(--secondary-text-color);
