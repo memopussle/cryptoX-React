@@ -17,9 +17,16 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`), //will add endpoint to url https://coinranking1.p.rapidapi.com/coins
     }),
+    getCryptoDetails: builder.query({
+      query: (coinId) => createRequest(`/coin/${coinId}`),
+    }),
+
+    getCoinPriceHistory: builder.query({
+      query: (coinId, timePeriod) => createRequest(`coin/${coinId}/history?timeperiod=${timePeriod}`),
+    }),
   }),
 });
 
-export const { useGetCryptosQuery } = cryptoApi; //creat a hook to get all data for the query above
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCoinPriceHistoryQuery } = cryptoApi; //creat a hook to get all data for the query above
 
-console.log(useGetCryptosQuery);
+console.log(useGetCoinPriceHistoryQuery);

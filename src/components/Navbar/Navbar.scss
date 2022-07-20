@@ -2,11 +2,17 @@
 .nav {
   justify-content: space-between;
   padding-top: 1rem;
+
+
 }
+
 
 
 .nav {
   width: 100vw;
+   
+
+  
 
   &__small {
     position: relative;
@@ -18,13 +24,14 @@
       border: none;
     }
 
-    &:focus {
-      border: none;
-    }
+   
   }
   &__link {
     color: var(--secondary-text-color);
     text-decoration: none;
+     &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -53,11 +60,8 @@
 }
 
 @media only screen and (max-width: 85rem) {
-  .nav {
-    display: inline-block;
-    &_pages {
-      display: none;
-    }
+  .nav__pages {
+    display: none;
   }
 }
 
@@ -73,7 +77,6 @@
   }
   p {
     display: inline-block;
-    color: var(--secondary-text-color) !important;
     padding-right: var(--standard-padding);
   }
 }

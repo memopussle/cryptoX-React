@@ -14,7 +14,7 @@ export const nftsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getNfts: builder.query({
-      query: (count) => createRequest(`/1d?&count=${count}`),
+      query: (date) => createRequest( `/${date}`),
     }),
   }),
 });

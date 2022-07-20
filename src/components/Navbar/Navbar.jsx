@@ -16,24 +16,24 @@ const Navbar = () => {
     <header className="header flex">
       <nav className="nav flex">
         <h5 className="nav__logo">KryptoX</h5>
-        <div className="nav_pages">
-          <Link to="/">
+        <div className="nav__pages">
+          <Link to="/" className="nav__link">
             <p>Home</p>
           </Link>
-          <Link to="/cryptoverse">
+          <Link className="nav__link" to="/cryptoverse">
             <p>Cryptoverse</p>
           </Link>
-          <Link to="/trendingnfts">
+          <Link className="nav__link" to="/trendingnfts">
             <p>Trending NFTs</p>
           </Link>
 
-          <Link to="/news">
+          <Link className="nav__link" to="/news">
             <p>News</p>
           </Link>
-          <Link to="/about">
+          <Link className="nav__link" to="/about">
             <p>About Us</p>
           </Link>
-          <Link to="/support">
+          <Link className="nav__link" to="/support">
             <Button />
           </Link>
         </div>

@@ -10,11 +10,13 @@ import header2 from "../img/header-img1.jpg";
 import distortion from "../img/distortion.jpg";
 import hoverEffect from "hover-effect";
 
+
+
 const LandingPage = () => {
   useEffect(() => {
-    var image_animate = new hoverEffect({
+     new hoverEffect({
       parent: document.querySelector(".wrapper"),
-      intensity: 0.4,
+      intensity: 0.2,
       image1: header1,
       image2: header2,
       displacementImage: distortion,
@@ -45,7 +47,7 @@ const LandingPage = () => {
         </div>
       </div>
       <Cryptoverse simplified />
-      <TrendingNFT />
+      <TrendingNFT simplified/>
     </>
   );
 };
