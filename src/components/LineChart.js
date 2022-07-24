@@ -1,27 +1,34 @@
-import React, {useState} from 'react';
+import React, { useState, useRef } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
-
-
-const LineChart = ({ coinHistory, timeStamp, price }) => {
-    console.log(coinHistory)
-    console.log(price)
-    
-    const [coinData, setCoinData] = useState({
+const LineChart = ({  timeStamp, price }) => {
+  const data = () => {
+    return {
       labels: timeStamp,
       datasets: [
         {
-          label: "Chart",
+          label: "Coin Chart",
           data: price,
-          borderColor: "#10022284",
-          color: "#9c9c9c",
-          tension: 0.1,
+          fill: "start",
+          backgroundColor: (context: ScriptableContext<"line">) => {
+            const ctx = context.chart.ctx;
+            const gradient = ctx.createLinearGradient(0, 0, 0, 1000);
+            gradient.addColorStop(0.4, "#9f14a328");
+             gradient.addColorStop(0.8, "#23b8e514");
+
+            return gradient;
+          },
+          borderColor: "#12698362",
+          pointRadius: 0,
         },
       ],
-    });
+    };
+  };
+   
+  
 
-  return <Line data={coinData}  />
-}
+  return <Line data={data()}  />;
+};
 
 export default LineChart;

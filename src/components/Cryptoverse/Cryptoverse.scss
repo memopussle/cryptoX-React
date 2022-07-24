@@ -58,7 +58,7 @@
   transition: all 0.3s ease;
 color: var(--secondary-text-color);
 margin: var(--standard-padding) 0;
- text-indent: 2.5rem;
+
   &:focus {
    outline: none;
   }
@@ -69,6 +69,7 @@ margin: var(--standard-padding) 0;
     transform: translateY( -5px);
   }
 }
+
 
 @media only screen and (min-width: 50rem) {
    .crypto__section {

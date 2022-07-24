@@ -1,18 +1,28 @@
+@mixin gradient-border {
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to left,
+      var(--primary-purple),
+      var(--primary-blue)
+    )
+    50 60;
+  box-shadow: 0px 10px 32px 10px rgba(23, 74, 141, 0.514);
+}
+
 h5 {
- display: inline-block;
+  display: inline-block;
 }
 
 .header {
   &__page {
     justify-content: space-between;
-    margin-bottom: var(--section-margin);
-    margin-top: var(--component-margin);
 
     &--text {
       flex-direction: column;
       justify-content: center;
-      
-      &,& h1 {
+      &,
+      & h1 {
         margin-bottom: var(--standard-padding);
       }
       max-width: 100rem;
@@ -23,40 +33,74 @@ h5 {
       margin-right: var(--small-padding);
     }
     &--image {
-
-
       &-wrapper {
         height: 70rem;
         width: 100%;
-        border-width: 4px;
-        border-style: solid;
-        border-image: linear-gradient(
-            to left,
-            var(--primary-purple),
-            var(--primary-blue)
-          )
-          50 60;
-           box-shadow: 0px 10px 32px 10px rgba(23, 74, 141, 0.514);
+
+        @include gradient-border;
       }
     }
   }
+}
+
+canvas {
+  width: 99.7% !important;
+  height: 99.7% !important;
 }
 
 .secondary-button {
   padding: 1rem 3rem;
 }
 
+.intro {
+  &__image {
+    width: 100%;
+    @include gradient-border;
+  }
+
+  &__text {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer {
+  &__image {
+    width: 100%;
+  }
+
+  &__action {
+    display: grid;
+  }
+}
 @media only screen and (min-width: 70rem) {
-   .header__page {
+  .header__page {
     display: grid;
     grid-template-columns: 2fr 1fr;
 
     &--image-wrapper {
-      width: 60rem;
+      width: 50.8rem;
     }
 
     &--text {
-        margin-right: var(--component-margin);
+      margin-right: var(--component-margin);
     }
-   }
+  }
+
+  .footer {
+    &__action {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+
+    .intro {
+      &__image {
+        width: 80%;
+      }
+    }
+  }
 }

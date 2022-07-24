@@ -1,0 +1,30 @@
+.options {
+ font-family: 50px;
+}
+
+.details {
+  &__stats {
+    background-color: rgba(136, 134, 134, 0.053);
+     border-radius: 16px;
+box-shadow: 0px 10px 32px 10px rgba(23, 74, 141, 0.188);
+     padding: 5rem 5rem;
+    flex-direction: column;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0px 10px 32px 10px rgba(23, 74, 141, 0.44);
+       background-color: rgba(130, 130, 130, 0.07);
+       transform: translateY(-5px);
+    }
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .details {
+    &__stats{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+

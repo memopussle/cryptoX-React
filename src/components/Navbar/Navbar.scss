@@ -16,7 +16,8 @@
 
   &__small {
     position: relative;
-    z-index: 100;
+    z-index: 1000;
+
 
     &--hamburger {
       cursor: pointer;
@@ -67,6 +68,10 @@
 
 @media only screen and (min-width: 85rem) {
   .nav {
+    &__link p {
+    display: inline-block;
+    padding-right: var(--standard-padding);
+  }
     &__pages {
       display: block;
     }
@@ -75,9 +80,6 @@
       display: none;
     }
   }
-  p {
-    display: inline-block;
-    padding-right: var(--standard-padding);
-  }
+  
 }
 

@@ -20,4 +20,3 @@ export const nftsApi = createApi({
 });
 
 export const { useGetNftsQuery } = nftsApi;
-console.log(useGetNftsQuery);

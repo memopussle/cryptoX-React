@@ -1,4 +1,7 @@
 .nft {
+  &__title {
+    display: inline-block;
+  }
   &__section {
     display: grid;
     gap: var(--small-padding);
@@ -44,7 +47,13 @@
   &:hover {
  background:rgba(131, 165, 170, 0.115);
     box-shadow: 0 4px 30px rgba(26, 42, 45, 0.24);
-    transform: translateY(-5px);
+ transform: translateY( -5px);
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .date > button:last-child {
+    margin-top: var(--small-padding);
   }
 }
 

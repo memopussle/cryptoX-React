@@ -8,21 +8,26 @@ import About from "./components/About/About";
 import News from "./components/News/News";
 import Support from "./components/Support/Support";
 import CryptoDetails from "./components/CryptoDetails/CryptoDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const App = () => {
+
   return (
-    <div className="background">
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/trendingnfts" element={<TrendingNFT />} />
-        <Route path="/cryptoverse" element={<Cryptoverse />} />
-        <Route path="/crypto/:coinId" element={<CryptoDetails />} />
-        <Route path="/support" element={<Support />} />
-      </Routes>
-    </div>
+
+      <main className="background">
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/trendingnfts" element={<TrendingNFT />} />
+          <Route path="/cryptoverse" element={<Cryptoverse />} />
+          <Route path="/crypto/:coinId" element={<CryptoDetails />} />
+          <Route path="/support" element={<Support />} />
+        </Routes>
+      </main>
+  
   );
 };
 

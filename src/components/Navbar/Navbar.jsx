@@ -13,8 +13,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="header flex">
-      <nav className="nav flex">
+    
+    <header className="header flex" data-scroll-section>
+      <nav
+        className="nav flex"
+        data-scroll
+        data-scroll-speed="6"
+        data-scroll-direction="vertical"
+        data-scroll-position="top"
+      >
         <h5 className="nav__logo">KryptoX</h5>
         <div className="nav__pages">
           <Link to="/" className="nav__link">
@@ -49,15 +56,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav__link" to="/trendingnfts">
-              <p>Trending NFTs</p>
-            </Link>
-          </li>
-          <li>
             <Link className="nav__link" to="/cryptoverse">
               <p>Cryptoverse</p>
             </Link>
           </li>
+          <li>
+            <Link className="nav__link" to="/trendingnfts">
+              <p>Trending NFTs</p>
+            </Link>
+          </li>
+
           <li>
             <Link className="nav__link" to="/news">
               <p>News</p>
