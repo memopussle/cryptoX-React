@@ -1,8 +1,8 @@
 .icon {
-    width: 3rem;
-    fill: white;
-
-
+  width: 3rem;
+  fill: white;
+  &__nav {
+    position: relative;
+    z-index: 500;
+  }
 }
-
-

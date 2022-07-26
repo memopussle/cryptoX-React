@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Syncopate:wght@400;700&display=swap");
 
+body {
+  background: url("../public/img/background-1.jpg");
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -14,9 +18,10 @@
   --standard-padding: 3rem;
   --secondary-text-color: #9c9c9c;
   --small-padding: 2rem;
-  --component-margin: 7rem;
-  --section-margin: 10rem;
+  --component-margin: 10rem;
+  --section-margin: 20rem;
 }
+
 
 @mixin button-main {
   border-radius: 5px;
@@ -38,6 +43,14 @@
     @include hover-state;
   
   }
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.narrow-margin {
+  margin-top: -50rem;
 }
 
 .margin-small{
@@ -96,6 +109,7 @@ cursor: pointer;
 
 a {
   text-decoration: none;
+  color: var(--secondary-text-color);
 }
 .secondary-button {
   @include button-secondary;

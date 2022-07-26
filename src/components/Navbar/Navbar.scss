@@ -2,61 +2,57 @@
 .nav {
   justify-content: space-between;
   padding-top: 1rem;
-
-
 }
-
-
 
 .nav {
   width: 100vw;
-   
-
-  
 
   &__small {
     position: relative;
-    z-index: 1000;
-
 
     &--hamburger {
       cursor: pointer;
       background-color: transparent;
       border: none;
     }
+  }
 
-   
-  }
-  &__link {
-    color: var(--secondary-text-color);
-    text-decoration: none;
-     &:focus {
-      outline: none;
-    }
-  }
 }
 
 .menuNav {
-  overflow-y: scroll;
   list-style: none;
+  display: none;
   position: fixed;
+  left: 50%;
   top: 0;
-  left: 60%;
-  bottom: 0;
   height: 100vh;
-  width: 0;
-  overflow: hidden;
-  max-width: 290px;
-  z-index: 9;
-  transition: all 0.8s ease-out;
+  width: 50rem;
+  background: linear-gradient(to right, #07082ee7, #1504249d);
+  padding-left: 5rem;
+
 
   &.showMenu {
-    width: 50%;
-    margin-top: 5rem;
+    display: block;
   }
 
   & li:first-child {
     margin-top: 15rem;
+  }
+}
+
+@media only screen and (min-width: 40rem) {
+  .menuNav {
+    left: 60%;
+
+    width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .menuNav {
+    left: 70%;
+
+    width: 40rem;
   }
 }
 
@@ -69,9 +65,9 @@
 @media only screen and (min-width: 85rem) {
   .nav {
     &__link p {
-    display: inline-block;
-    padding-right: var(--standard-padding);
-  }
+      display: inline-block;
+      padding-right: var(--standard-padding);
+    }
     &__pages {
       display: block;
     }
@@ -80,6 +76,4 @@
       display: none;
     }
   }
-  
 }
-

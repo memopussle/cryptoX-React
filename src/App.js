@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Homepage/Landingpage/LandingPage";
@@ -12,10 +12,10 @@ import ScrollToTop from "./components/ScrollToTop";
 
 
 const App = () => {
-
+  const containerRef = useRef();
   return (
-
-      <main className="background">
+   
+      <main ref={containerRef}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/support" element={<Support />} />
         </Routes>
       </main>
-  
+   
   );
 };
 

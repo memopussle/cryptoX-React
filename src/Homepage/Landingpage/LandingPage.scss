@@ -14,6 +14,7 @@ h5 {
   display: inline-block;
 }
 
+
 .header {
   &__page {
     justify-content: space-between;
@@ -65,12 +66,42 @@ canvas {
 }
 
 .footer {
-  &__image {
-    width: 100%;
-  }
+
 
   &__action {
     display: grid;
+  }
+  &__text {
+    &--q {
+      padding: 2rem 2rem;
+      border-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(
+          to left,
+          var(--primary-purple),
+          var(--primary-blue)
+        )
+        10;
+      box-shadow: 0px 10px 32px 10px rgba(23, 74, 141, 0.233);
+      background-color: rgba(131, 110, 131, 0.068);
+  
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    color: white;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 70rem) {
+  .intro__text {
+    margin-top: var(--component-margin);
   }
 }
 @media only screen and (min-width: 70rem) {
@@ -90,6 +121,12 @@ canvas {
   .footer {
     &__action {
       grid-template-columns: 2fr 1fr;
+    }
+    &__text--left {
+      display: flex;
+      margin-right: var(--component-margin);
+      flex-direction: column;
+      justify-content: center;
     }
   }
 

@@ -9,7 +9,10 @@ import { Navbar } from "../index";
 import millify from "millify";
 import LineChart from "../LineChart";
 
+
+
 const CryptoDetails = () => {
+  
   const { coinId } = useParams(); //= useParams.coinIdcoinId
   const [timePeriod, setTimePeriod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
@@ -62,49 +65,56 @@ const CryptoDetails = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="container details">
-        <div className=" margin-top">
-          <h5 className="margin-right">
-            {crypto.name} - {crypto.symbol}
-          </h5>
 
-          <img src={crypto.iconUrl} alt={crypto.name} className="icon" />
+        <div >
+          <Navbar />
+          <div className="container details" >
+            <div className=" margin-top">
+              <h5 className="margin-right">
+                {crypto.name} - {crypto.symbol}
+              </h5>
 
-          <p className="secondary-color">{coinHistory?.data?.change}%</p>
-        </div>
-        <select
-          defaultValue="7d"
-          placeholder="Select Time-period"
-          onChange={(event) => setTimePeriod(event.target.value)}
-          className="search"
-        >
-          {time.map((date) => (
-            <option key={date} className="options">
-              {date}
-            </option>
-          ))}
-        </select>
-        <LineChart timeStamp={timeStamp} price={price} className="line-chart" />
+              <img src={crypto.iconUrl} alt={crypto.name} className="icon" />
 
-          <div className="flex details__stats margin-top">
-            <div>
-              {stats.map(({ title, value }) => (
-                <p>
-                  {title}: {value}
-                </p>
-              ))}
+              <p className="secondary-color">{coinHistory?.data?.change}%</p>
             </div>
-            <div>
-              {generalStats.map(({ title, value }) => (
-                <p>
-                  {title}: {value}
-                </p>
+            <select
+              defaultValue="7d"
+              placeholder="Select Time-period"
+              onChange={(event) => setTimePeriod(event.target.value)}
+              className="search"
+            >
+              {time.map((date) => (
+                <option key={date} className="options">
+                  {date}
+                </option>
               ))}
+            </select>
+            <LineChart
+              timeStamp={timeStamp}
+              price={price}
+              className="line-chart"
+            />
+
+            <div className="flex details__stats margin-top">
+              <div>
+                {stats.map(({ title, value }) => (
+                  <p>
+                    {title}: {value}
+                  </p>
+                ))}
+              </div>
+              <div>
+                {generalStats.map(({ title, value }) => (
+                  <p>
+                    {title}: {value}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-    
+ 
     </>
   );
 };

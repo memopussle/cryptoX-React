@@ -13,15 +13,8 @@ const Navbar = () => {
   };
 
   return (
-    
-    <header className="header flex" data-scroll-section>
-      <nav
-        className="nav flex"
-        data-scroll
-        data-scroll-speed="6"
-        data-scroll-direction="vertical"
-        data-scroll-position="top"
-      >
+    <header className="header flex">
+      <nav className="nav flex">
         <h5 className="nav__logo">KryptoX</h5>
         <div className="nav__pages">
           <Link to="/" className="nav__link">
@@ -45,43 +38,47 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-      <nav className="nav__small">
+      <nav className="nav__small" data-scroll-section>
         <button className="nav__small--hamburger" onClick={handleToggle}>
           {navbarOpen ? <Xmark /> : <Hamburger />}
         </button>
-        <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-          <li>
-            <Link className="nav__link" to="/">
-              <p>Home</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="nav__link" to="/cryptoverse">
-              <p>Cryptoverse</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="nav__link" to="/trendingnfts">
-              <p>Trending NFTs</p>
-            </Link>
-          </li>
+        <div>
+      
+            <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
+              <li>
+                <Link to="/">
+                  <p>Home</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/cryptoverse">
+                  <p>Cryptoverse</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/trendingnfts">
+                  <p>Trending NFTs</p>
+                </Link>
+              </li>
 
-          <li>
-            <Link className="nav__link" to="/news">
-              <p>News</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="nav__link" to="/about">
-              <p>About</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="nav__link" to="/about">
-              <Button />
-            </Link>
-          </li>
-        </ul>
+              <li>
+                <Link to="/news">
+                  <p>News</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <p>About</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/support">
+                  <Button />
+                </Link>
+              </li>
+            </ul>
+          </div>
+       
       </nav>
     </header>
   );

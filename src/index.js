@@ -6,18 +6,14 @@ import store from "./app/store";
 import { Provider } from "react-redux";
 import ScrollToTop from "./components/ScrollToTop";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Router>
     <Provider store={store}>
-      <div className="general-style">
-        <ScrollToTop />
-       
-            <App />
-  
-      </div>
+      <ScrollToTop />
+
+      <App />
     </Provider>
   </Router>
 );
