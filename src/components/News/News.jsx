@@ -1,25 +1,30 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./News.scss";
 import { Navbar } from "../index";
 import { useGetNewsQuery } from "../../services/newsApi";
 import Arrow from "../../re-usable components/Arrow";
 import { Link } from "react-router-dom";
 
-
 const News = ({ simplified }) => {
   const { data: news } = useGetNewsQuery();
-  const [search, setSearch] = useState();
-
-
+  const [search, setSearch] = useState("");
   const fullNews = news?.slice(0, 34);
+  const [newsList, setNewsList] = useState(fullNews);
+  console.log(newsList);
 
   const halfNews = news?.slice(0, 6);
-  const newsArray = simplified ? halfNews : fullNews;
+  const newsArray = simplified ? halfNews : newsList;
 
+  useEffect(() => {
+    const filteredData = news?.filter((eachNews) =>
+      eachNews.title.toLowerCase().includes(search)
+    );
 
-  const filteredData = news.filter(eachNews => eachNews.title.toLowerCase().includes("customer"))
+    setNewsList(filteredData);
 
-console.log(filteredData)
+    
+  }, [news, search]);
+
   return (
     <div>
       {!simplified && <Navbar />}
@@ -36,7 +41,7 @@ console.log(filteredData)
               <input
                 className="search"
                 placeholder="Search News"
-            
+                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
           </>
