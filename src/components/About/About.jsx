@@ -22,20 +22,20 @@ const About = () => {
       person: "Jack",
       img: "https://images.pexels.com/photos/7561911/pexels-photo-7561911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       description:
-        "Jack is the fun guy - also he is the best consultant of the team. Have any doubts? Talk to him. Have any concerns? Talk to him.",
+        "Jack is the fun guy - also he is the best consultant of the team. He is also a marathon runner and has won 2 medals in the last 3 years!",
     },
   ];
   return (
     <div>
       <Navbar />
-      <div className="container ">
+      <div className="container about">
         <h1 className="about__title">About Us</h1>
-       
+
         <div className="about__wrapper component-margin">
           {info?.map((info, i) => (
             <div key={i} className="about__card flex">
               <img src={info.img} alt="avatar" className="about__avatar" />
-              <h6>{info.person}</h6>
+              <h6 className="margin-standard">{info.person}</h6>
               <p>{info.description}</p>
             </div>
           ))}
