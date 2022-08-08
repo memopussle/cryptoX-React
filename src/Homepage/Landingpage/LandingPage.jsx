@@ -9,7 +9,7 @@ import header2 from "../img/header-img1.jpg";
 import distortion from "../img/distortion.jpg";
 import hoverEffect from "hover-effect";
 import Intro from "../img/intro.jpg";
-
+import Footer from "../../components/Footer/Footer";
 import footer from "../img/footer.jpg";
 import footer1 from "../img/footer1.jpg";
 import wave from "../img/wave.jpg";
@@ -143,6 +143,7 @@ const LandingPage = () => {
             <div className="header__page--image-wrapper footer-wrapper"></div>
           </section>
         </div>
+        <Footer />
       </main>
     </>
   );

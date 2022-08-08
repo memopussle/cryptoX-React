@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./News.scss";
-import { Navbar } from "../index";
+import { Navbar, Footer } from "../index";
 import { useGetNewsQuery } from "../../services/newsApi";
 import Arrow from "../../re-usable components/Arrow";
 import { Link } from "react-router-dom";
@@ -59,6 +59,7 @@ const News = ({ simplified }) => {
           ))}
         </div>
       </div>
+      {!simplified && <Footer />}
     </div>
   );
 };

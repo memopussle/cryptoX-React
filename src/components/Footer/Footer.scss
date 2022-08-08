@@ -1,0 +1,29 @@
+.footer {
+    flex-wrap: wrap;
+    margin-top: var(--component-margin);
+     & ul {list-style-type: none;}
+
+     & > * {
+        margin-right: var(--small-padding);
+        margin-top: var(--small-padding);
+     }
+
+    &__body {
+        font-size:1.5rem;
+        font-weight: 300;
+       font-family: 'Roboto', sans-serif;
+       color: var(--secondary-text-color);
+    }
+
+    & button {
+        margin-right: var(--small-padding);
+         margin: var(--small-padding) var(--small-padding) var(--small-padding) 0;
+    }
+}
+
+@media only screen and (min-width: 70rem) {
+.footer {
+    justify-content: space-between;
+
+}
+}
