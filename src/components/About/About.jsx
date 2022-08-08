@@ -28,17 +28,19 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <div className="container about">
-        <h1 className="about__title">About Us</h1>
+      <div className="container">
+        <div className=" about">
+          <h1 className="about__title">About Us</h1>
 
-        <div className="about__wrapper component-margin">
-          {info?.map((info, i) => (
-            <div key={i} className="about__card flex">
-              <img src={info.img} alt="avatar" className="about__avatar" />
-              <h6 className="margin-standard">{info.person}</h6>
-              <p>{info.description}</p>
-            </div>
-          ))}
+          <div className="about__wrapper component-margin">
+            {info?.map((info, i) => (
+              <div key={i} className="about__card flex">
+                <img src={info.img} alt="avatar" className="about__avatar" />
+                <h6 className="margin-standard">{info.person}</h6>
+                <p>{info.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
