@@ -35,15 +35,13 @@ https://user-images.githubusercontent.com/91854884/183857467-91aed17d-0c3b-4176-
 
 [View Live Website Here ](https://luxury-seahorse-505c6e.netlify.app/)
 
-KryptoX is a website for crypto enthusiasts - it displays all information about crypto, trending NFTs and News. With KryptoX, you won't miss out on the daily prices, markets, and Crypto News.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+KryptoX is a website for crypto enthusiasts - it displays all of the latest information about crypto, trending NFTs and daily News from the world of crypto. With KryptoX, you won't miss out on market trends, price changes and general updates.
 
 
 
 ### Built With
 
-I used these technologies to build this project: React and JavaScript. I use the RTK Query method from Redux Toolkit to simplify the existing data fetching logic and Sass to write CSS styles faster. 
+I primarily utilised these technologies to build this project: React and JavaScript. I used RTK Query method from Redux Toolkit to simplify the existing data fetching logic and Sass to write CSS styles faster. Also, I implemented a few small npm packages such as hover-effect, chart.js and millify to achieve distortion effects and to enhance the overall design.
 
 
 [![Technologies used](https://skills.thijs.gg/icons?i=react,js&theme=light)](https://skills.thijs.gg)
@@ -53,15 +51,14 @@ I used these technologies to build this project: React and JavaScript. I use the
 ### Features
   <ol>
         <li><p>User-friendly navigation</p></li>
-        <li><p>Search engine for cryptocurrencies and News. </p></li>
-        <li><p>Display the lastest cryptocurriences markets, news and top trending NFTs</p></li>
+        <li><p>Search engine for cryptocurrencies and news. </p></li>
+        <li><p>Display the latest cryptocurrency markets, news and top selling NFTs</p></li>
   </ol>
 
 
 ### Challenges
 
-Redux toolkit was not easy to learn for the first-time learner. I ensured I knew the basics and foundation first and continued to learn along the project.I was sastisfied at what I have accomplished, but in th future, I would love to add some animations for this project, add a support page and link it to third-party Stripe for payment. Also, it would be a good idea to place a booking system for those who wish for the consultancy.
-
+Redux toolkit was not easy to learn at first but then I became familiar with it quicker than I thought I would. I ensured I knew the basics and foundation first and continued to build on my knowledge of the library as my project progressed. I am sastisfied at what I have accomplished, but in the future, I would love to add some animations to this project, add a support page and link it to Stripe for payment. Also, I think it would be a good idea to integrate a live help and crypto consulting service.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -70,7 +67,7 @@ Redux toolkit was not easy to learn for the first-time learner. I ensured I knew
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an instructions of how you may set up this roject locally.
+These are instructions on how you may set up this project locally
 
 ### Installation
 
