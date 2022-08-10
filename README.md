@@ -60,7 +60,7 @@ I used these technologies to build this project: React and JavaScript. I use the
 
 ### Challenges
 
-Redux toolkit was not easy to learn for the first-time learner. I ensured I knew the basics and foundation first and continued to learn along the project. I would love to add some animations for this project in the future, add a support page and link it to third-party Stripe for payment. Also, it would be a good idea to implement a booking system for those who wish for the consultancy.
+Redux toolkit was not easy to learn for the first-time learner. I ensured I knew the basics and foundation first and continued to learn along the project.I was sastisfied at what I have accomplished, but in th future, I would love to add some animations for this project, add a support page and link it to third-party Stripe for payment. Also, it would be a good idea to place a booking system for those who wish for the consultancy.
 
 
 
