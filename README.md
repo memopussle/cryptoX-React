@@ -33,7 +33,7 @@
 https://user-images.githubusercontent.com/91854884/183857467-91aed17d-0c3b-4176-bfe2-943e87acfc0e.mp4
 
 
-[View Live Website Here ](https://luxury-seahorse-505c6e.netlify.app/)
+[View Live Website Here ](https://sweet-druid-592559.netlify.app/)
 
 KryptoX is a website for crypto enthusiasts - it displays all of the latest information about crypto, trending NFTs and daily News from the world of crypto. With KryptoX, you won't miss out on market trends, price changes and general updates.
 
