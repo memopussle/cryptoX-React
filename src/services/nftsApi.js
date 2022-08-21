@@ -1,11 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 
 const nftsHeaders = {
-  "X-RapidAPI-Key": "03f8ed297fmshe38d28b4515a3a0p1cd970jsn5702025fb60a",
-  "X-RapidAPI-Host": "top-nft-collections-and-sales.p.rapidapi.com",
+  "X-RapidAPI-Key": process.env.REACT_APP_NFTS_RAPID_API,
+  "X-RapidAPI-Host": process.env.REACT_APP_NFTS_HOST,
 };
-const baseUrl =
-  "https://top-nft-collections-and-sales.p.rapidapi.com/collections";
+const baseUrl = `https://${process.env.REACT_APP_NFTS_HOST}/collections`;
 
 const createRequest = (url) => ({ url, headers: nftsHeaders });
 
@@ -14,7 +13,7 @@ export const nftsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getNfts: builder.query({
-      query: (date) => createRequest( `/${date}`),
+      query: (date) => createRequest(`/${date}`),
     }),
   }),
 });

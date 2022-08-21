@@ -119,7 +119,7 @@ const LandingPage = () => {
               <h2>Frequently asked questions</h2>
 
               {frequentlyAsked.map(({ question, answer, i }) => (
-                <div className="footer__text--q margin-small ">
+                <div className="footer__text--q margin-small " key={i}>
                   <div className="flex space-between">
                     <p>{question}</p>
                     <button onClick={handleClick} className="footer__button">

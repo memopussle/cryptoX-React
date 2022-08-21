@@ -31,7 +31,7 @@ const News = ({ simplified }) => {
       <div className="container">
         <h2 className="margin-section news__title margin-right">News</h2>
         {simplified && (
-          <Link to="/trendingnfts">
+          <Link to="/news">
             <Arrow />
           </Link>
         )}
@@ -51,7 +51,12 @@ const News = ({ simplified }) => {
           {newsArray?.map(({ title, url, source }, i) => (
             <div key={i} className="news__card">
               <h6>{title}</h6>
-              <a className="secondary-color" href={url} norefer="_blank">
+              <a
+                className="secondary-color"
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Read more
               </a>
               <p className="secondary-color">Source: {source}</p>

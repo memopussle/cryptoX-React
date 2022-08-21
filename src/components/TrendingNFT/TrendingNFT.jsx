@@ -67,7 +67,7 @@ const TrendingNFT = ({ simplified }) => {
                 <div className="nft__card">
                   <h6>{nft.collection_name}</h6>
 
-                  <a href={nft.collection_url} norefer="_blank">
+                  <a href={nft.collection_url} target="_blank" rel="noreferrer">
                     Website
                   </a>
                   <p>Trades: {nft.trades}</p>
