@@ -41,10 +41,22 @@ KryptoX is a website for crypto enthusiasts - it displays all of the latest info
 
 ### Built With
 
-I primarily utilised these technologies to build this project: React and JavaScript. I used RTK Query method from Redux Toolkit to simplify the existing data fetching logic and Sass to write CSS styles faster. Also, I implemented a few small npm packages such as hover-effect, chart.js and millify to achieve distortion effects and to enhance the overall design.
+- [React](https://reactjs.org/)
+- [JavaScript](https://www.javascript.com/)
+- [Redux-toolkit](https://redux-toolkit.js.org/)
+- [ChartJS](https://www.chartjs.org/)
+
+I primarily utilised these technologies to build this project: React and JavaScript. I used RTK Query method from Redux Toolkit to simplify the existing data fetching logic and Sass to write CSS styles faster. Also, I implemented a few small npm packages such as hover-effect, chart.js and millify to achieve distortion effects and to get clean and consistent design.
 
 
-[![Technologies used](https://skills.thijs.gg/icons?i=react,js&theme=light)](https://skills.thijs.gg)
+### Other Dependencies
+
+- millify
+- react-icons
+- react-router-dom
+- sass
+- hover-effect
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,8 +69,16 @@ I primarily utilised these technologies to build this project: React and JavaScr
 
 
 ### Challenges
+- I intended to fetch several APIs to display different information on my website, such as Crypto news, market, and NFTs. The challenge I got was how to call different APIs for other information without repetitive code and how to only display six items on the homepage and all items on individual pages. 
 
-Redux toolkit was not easy to learn at first but then I became familiar with it quicker than I thought I would. I ensured I knew the basics and foundation first and continued to build on my knowledge of the library as my project progressed. I am sastisfied at what I have accomplished, but in the future, I would love to add some animations to this project, add a support page and link it to Stripe for payment. Also, I think it would be a good idea to integrate a live help and crypto consulting service.
+#### Workaround
+- **Consume different web APIs**: I could use the standard fetching method or Axios. However, I want to keep my project clean without too many repetitive lines of codes; hence I went with the RTK query from redux-toolkit. It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic myself. Firstly, I need to call all the APIs, pass them to the reducer, and wrap all the components with the reducer. Now APIs are made global and public so that all components can access and use those data.
+
+- **Return six items on the homepage**: if a specific component is on the homepage, I pass a property called simplified and no property if the component is on its page. By giving that property, I can now determine when to display six items and all items from the API. If the component has a simplified property, indicating that the route is now the homepage, I use the JavaScript method slice to slice the array returned from API; otherwise, the path is an individual page, allowing all of the data to display on the page.
+
+#### Future Improvements
+
+ I am sastisfied at what I have accomplished, but in the future, I would love to add some animations to this project, add a support page and link it to Stripe for payment. Also, I think it would be a good idea to integrate a live help and crypto consulting service.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -84,7 +104,27 @@ These are instructions on how you may set up this project locally
    ```sh
    npm start
    ```
-<p>Open http://localhost:3000 with your browser to see the result.</p>
+
+  ### Add .env file
+
+  Please add these lines to your env file to get the application running:
+
+  ```js
+REACT_APP_CRYPTO_RAPID_API = YOUR_CRYPTO_API
+REACT_APP_CRYPTO_HOST = YOUR_CRYPTO_HOST_LINK
+
+REACT_APP_NEWS_RAPID_API = YOUR_NEWS_API
+REACT_APP_NEWS_HOST = YOUR_NEWS_HOST_LINK
+
+
+REACT_APP_NFTS_RAPID_API = YOUR_NFTS_API
+REACT_APP_NFTS_HOST = YOUR_NFTS_HOST_LINK
+
+  ```
+
+  ### Running the application
+
+Open http://localhost:3000 with your browser to see the result.</
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,7 +138,7 @@ Thu Giang - xanhtham.cuc@gmail.com
 <br /> 
 Project Link: 
 
-[KryptoX Website](https://github.com/memopussle/cryptoX-React)
+[KryptoX Source Code](https://github.com/memopussle/cryptoX-React)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
