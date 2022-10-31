@@ -7,7 +7,6 @@ const nftsHeaders = {
 const baseUrl = `https://${process.env.REACT_APP_NFTS_HOST}/collections`;
 
 const createRequest = (url) => ({ url, headers: nftsHeaders });
-
 export const nftsApi = createApi({
   reducerPath: "nftsApi",
   baseQuery: fetchBaseQuery({ baseUrl }),
